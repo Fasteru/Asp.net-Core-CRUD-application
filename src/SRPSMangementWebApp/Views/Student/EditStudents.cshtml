@@ -1,0 +1,115 @@
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@model SRPS.MODELS.StudentsModels
+
+@{
+ ViewBag.Title = "Edit Student Records";
+}
+
+<head>
+
+    <link rel="stylesheet" href="~/CSS/StyleSheet.css"/>
+
+</head>
+
+<body class="white-back">
+    <div class="center-box">
+        <div class="form-field flex">
+            <div class="w-25">
+                <h2>Edit Person</h2>
+            </div>
+            <div class="flex-1">
+                <a asp-controller="Student" asp-action="GetStudents" class="link-hover">Back to Student List</a>
+            </div>   
+        </div>       
+        <form asp-controller="Student" asp-action="EditStudent" method="post">
+
+            <input type="hidden" asp-for="Id" />
+
+            @*StudentName*@
+            <div class="form-field flex">
+                <div class="w-25">
+                    <label asp-for="StudentName" class="form-label pt">Student Name</label>
+                </div>
+                <div class="flex-1">
+                    <input asp-for="StudentName" class="form-input" value="@Model.StudentName" />
+                    <span asp-validation-for="StudentName" class="text-red"></span>
+                </div>
+            </div>
+
+
+            @*Class*@
+            <div class="form-field flex">
+                <div class="w-25">
+                    <label asp-for="Class" class="form-label pt">Class</label>
+                </div>
+                <div class="flex-1">
+                    <input asp-for="Class" class="form-input" value="@Model.Class" />
+                    <span asp-validation-for="Class" class="text-red"></span>
+                </div>
+            </div>
+
+            @*FathersName*@
+            <div class="form-field flex">
+                <div class="w-25">
+                    <label asp-for="FathersName" class="form-label pt">Father Name</label>
+                </div>
+                <div class="flex-1">
+                    <input asp-for="FathersName" class="form-input" value="@Model.FathersName" />
+                    <span asp-validation-for="FathersName" class="text-red"></span>
+                </div>
+            </div>
+
+            @*MothersName*@
+            <div class="form-field flex">
+                <div class="w-25">
+                    <label class="form-label" asp-for="MothersName">Mother Name</label>
+                </div>
+                <div class="flex-1">
+                    <input asp-for="MothersName" class="form-input" value="@Model.MothersName" />
+                    <span asp-validation-for="MothersName" class="text-red"></span>
+                </div>
+            </div>
+            @*Marks*@
+            <div class="form-field flex">
+                <div class="w-25">
+                    <label class="form-label" asp-for="Marks">Obtained Marks</label>
+                </div>
+                <div class="flex-1">
+                    <input asp-for="Marks" class="form-input" />
+                    <span asp-validation-for="Marks" class="text-red"></span>
+                </div>
+            </div>
+
+            @*MothersName*@
+            <div class="form-field flex">
+                <div class="w-25">
+                    <label class="form-label" asp-for="SchoolHouse">SchoolHouse</label>
+                </div>
+                <div class="flex-1">
+                    <input asp-for="SchoolHouse" class="form-input" />
+                    <span asp-validation-for="SchoolHouse" class="text-red"></span>
+                </div>
+            </div>
+
+            @*MothersName*@
+            <div class="form-field flex">
+                <div class="w-25">
+                    <label class="form-label" asp-for="IsFeesPaid">IsFeesPaid</label>
+                </div>
+                <div class="flex-1">
+                    <input asp-for="IsFeesPaid" class="form-input" />
+                    <span asp-validation-for="IsFeesPaid" class="text-red"></span>
+                </div>
+            </div>
+
+            @*Submit*@
+            <div class="form-field flex">
+                <div class="w-25">
+                </div>
+                <div class="flex-1">
+                    <button type="submit" class="button button-green-back">Update</button>
+                </div>
+
+        </form>
+    </div>
+</body>

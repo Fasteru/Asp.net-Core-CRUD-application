@@ -1,0 +1,56 @@
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@model IEnumerable<SRPS.MODELS.StudentsModels>
+
+@{
+    ViewBag.Title = "Student";
+}
+
+<head>
+    <title>Student</title>
+    <link rel="stylesheet" href="~/CSS/StyleSheet.css" />
+</head>
+<body>
+
+    <div class="form-container">
+
+        <h2>Student List</h2>
+        <div>
+            <a asp-controller="Student" asp-action="CreateStudent">
+                <button>Create Records</button>
+            </a>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Fathers Name</th>
+                    <th>Mothers Name</th>
+                    <th>Marks</th>
+                    <th>SchoolHouse</th>
+                    <th>IsFeesPaid</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in Model)
+                {
+                    <tr>
+                        <td>@student.StudentName</td>
+                        <td>@student.Class</td>
+                        <td>@student.FathersName</td>
+                        <td>@student.MothersName</td>
+                        <td>@student.Marks</td>
+                        <td>@student.SchoolHouse</td>
+                        <td>@student.IsFeesPaid</td>
+                        <td>
+                            <a asp-controller="Student" asp-action="EditStudent" asp-route-studentID="@student.Id">Edit</a>
+                            <a asp-controller="Student" asp-action="DeleteStudent" asp-route-studentID="@student.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</body>

@@ -1,0 +1,24 @@
+[
+  {
+    "Id": "d3f6452d-b736-4d05-8390-79048e69c3cc",
+    "StudentName": "Rohit Kumar",
+    "Class": "XI",
+    "FathersName": "Ram Kumar",
+    "MothersName": "Shoobha Devi",
+    "Marks": 80,
+    "SchoolHouse": "Challenger",
+    "IsFessPaid": "True"
+
+  },
+  {
+    "Id": "a7b4f091-8c66-4a0b-9e86-02b8c1f64c5e",
+    "StudentName": "Rahul Shukla",
+    "Class": "XII",
+    "FathersName": "Raj Shukla",
+    "MothersName": "Gayatri Shukla",
+    "Marks": 90,
+    "SchoolHouse": "Challenger",
+    "IsFessPaid": "True"
+
+  }
+]
